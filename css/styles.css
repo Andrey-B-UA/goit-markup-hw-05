@@ -237,6 +237,8 @@ background-color: var(--color-link);
 font-size: 16px;
 border: 0;
 line-height: 1.9;
+font-weight: 700;
+letter-spacing: 0.06em;
 cursor: pointer;
 padding: 10px 32px;
 border-radius: 4px;
@@ -306,9 +308,32 @@ text-align: center;
 }
 
 .what-do-we-do-card {
+/* position: relative; */
 display: flex;
 gap: 30px;
 margin: 0;
+}
+
+
+.what-do-we-do-card-insert{
+	position: relative;
+}
+.what-do-we-do-card-background {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	padding-top: 27px;
+	color: var(--color-background);
+	background-color: rgba(47, 48, 58, 0.8);
+
+	letter-spacing: 0.03em;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.17;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .regular-customers{
@@ -647,7 +672,7 @@ height: 404px; */
 }
 
 .card{
-position: relative;
+/* position: relative; */
 display: block;
 text-decoration: none;
 transition: color 250ms, fill 250ms, background-color 250ms, box-shadow 250ms;
@@ -676,6 +701,7 @@ color: var(--color-secondary)
 
 .card-insert{
 	position: relative;
+	overflow: hidden;
 }
 
 .card-content {
@@ -685,8 +711,8 @@ border: 1px solid #EEEEEE;
 border-top: 0px;
 }
 
+
 .card-description{
-opacity: 0;
 position: absolute;
 top: 0;
 left: 0;
@@ -695,12 +721,11 @@ height: 100%;
 padding: 63px 24px;
 color: var(--color-background);
 background-color: rgba(33, 150, 243, 0.9);
-transform: translateY(100%);
+transform: translateY(101%);
 transition: transform 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:hover .card-description{
-opacity: 1;
 transform: translateY(0);
 }
 
@@ -744,6 +769,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 	width: 30px;
 	height: 30px;
 	fill: color #000000;
